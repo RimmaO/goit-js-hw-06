@@ -7,7 +7,7 @@ const outputRef = document.querySelector("#name-output");
 
 const placeholderRef = (event) => {
   outputRef.textContent =
-    inputRef.value !== "" ? event.currentTarget.value : "Anonymous";
+    inputRef.value.trim() !== "" ? event.currentTarget.value : "Anonymous";
 };
 
 inputRef.addEventListener("input", placeholderRef);

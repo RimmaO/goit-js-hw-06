@@ -5,8 +5,8 @@
 const inputRef = document.getElementById("font-size-control");
 const textRef = document.getElementById("text");
 
-const onInput = (event) => {
-  textRef.style.fontSize = event.currentTarget.value + "px";
+const onInput = () => {
+  textRef.style.fontSize = inputRef.value + "px";
 };
 
 inputRef.addEventListener("input", onInput);

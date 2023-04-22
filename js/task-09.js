@@ -10,7 +10,9 @@ function getRandomHexColor() {
 }
 
 const onClickChangeColor = (event) => {
-  textRef.textContent = bodyRef.style.backgroundColor = getRandomHexColor();
+  textRef.textContent = getRandomHexColor();
+
+  bodyRef.style.backgroundColor = getRandomHexColor();
 };
 
 const textRef = document.querySelector(".color");

@@ -27,22 +27,22 @@ formRef.addEventListener("submit", (event) => {
 });
 
 // Пояснення
-const formRef = document.querySelector(".login-form");
-const profile = {};
-// console.log(formRef);
-formRef.addEventListener("submit", (event) => {
-  event.preventDefault(); // для скасування дії браузера - щодо перезавантаження сторінки
-  const emailValue = formRef.elements.email.value.trim();
-  const passwordValue = formRef.elements.password.value.trim();
-  // console.log(emailValue);// почта яку ввів користувач
-  if (emailValue === "" || passwordValue === "") {
-    alert("All fields must be filled in");
-  } else {
-    profile.email = emailValue;
-    profile.password = passwordValue;
-    console.log(profile);
-  }
-  // виводимо обєкт{email: qwe@qwe password: 12345;
+// const formRef = document.querySelector(".login-form");
+// const profile = {};
+// // console.log(formRef);
+// formRef.addEventListener("submit", (event) => {
+//   event.preventDefault(); // для скасування дії браузера - щодо перезавантаження сторінки
+//   const emailValue = formRef.elements.email.value.trim();
+//   const passwordValue = formRef.elements.password.value.trim();
+//   // console.log(emailValue);// почта яку ввів користувач
+//   if (emailValue === "" || passwordValue === "") {
+//     alert("All fields must be filled in");
+//   } else {
+//     profile.email = emailValue;
+//     profile.password = passwordValue;
+//     console.log(profile);
+//   }
+//   // виводимо обєкт{email: qwe@qwe password: 12345;
 
-  formRef.reset(); // очищаємо інпут
-});
+//   formRef.reset(); // очищаємо інпут
+// });

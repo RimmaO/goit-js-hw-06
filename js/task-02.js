@@ -16,13 +16,21 @@ const ingredients = [
 // Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
 
 // Розвязок
-ingredients.forEach((element) => {
+ingredients.map((element) => {
   const ingredient = document.createElement("li");
   ingredient.textContent = element;
   ingredient.classList.add("item");
   const ingredientsList = document.querySelector("#ingredients");
-  ingredientsList.append(ingredient);
+  ingredientsList.insertAdjacentElement("afterbegin", ingredient);
 });
+// variant 2
+// ingredients.forEach((element) => {
+//   const ingredient = document.createElement("li");
+//   ingredient.textContent = element;
+//   ingredient.classList.add("item");
+//   const ingredientsList = document.querySelector("#ingredients");
+//   ingredientsList.append(ingredient); - додає на кожному кроці
+// });
 
 // Пояснення
 // ingredients.forEach((element) => {
