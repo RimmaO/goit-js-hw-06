@@ -12,7 +12,7 @@ function getRandomHexColor() {
 const onClickChangeColor = (event) => {
   textRef.textContent = getRandomHexColor();
 
-  bodyRef.style.backgroundColor = getRandomHexColor();
+  bodyRef.style.backgroundColor = textRef.textContent;
 };
 
 const textRef = document.querySelector(".color");

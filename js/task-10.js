@@ -3,17 +3,33 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-
+// перший етап - пошук елементів в <div>
 const refs = {
   input: document.querySelector('[type="number"]'),
   create: document.querySelector("[data-create]"),
   destroy: document.querySelector("[data-destroy]"),
   boxes: document.getElementById("boxes"),
 };
+// другий етап - перевірка умови інпуту та додаємо подію по створенню числа
+
+refs.create.addEventListener("click", () => {
+  if (
+    Number(refs.input.value) > Number(refs.input.max) ||
+    Number(refs.input.value) < Number(refs.input.min)
+  ) {
+    alert("Please enter number from 1 to 100");
+  } else {
+    createBoxes();
+  }
+});
+
+// третій етап - додаємо подію на створення боксів
 
 const createBoxes = () => {
+  refs.boxes.innerHTML = "";
   let size = 30;
   const boxesArray = [];
+
   for (let index = 0; index < refs.input.value; index += 1) {
     size += 10 * index;
     const div = `<div class="boxes-item" style="background-color: ${getRandomHexColor()}; width: ${size}px; height:${size}px"></div>`;
@@ -22,7 +38,7 @@ const createBoxes = () => {
   refs.boxes.insertAdjacentHTML("beforeend", boxesArray.join(""));
 };
 
-refs.create.addEventListener("click", createBoxes);
+// четвертий етап - додаємо подію на видалення створених елементів
 
 const destroyBoxes = () => {
   refs.input.value = "";

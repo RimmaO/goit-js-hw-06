@@ -23,8 +23,8 @@ const images = [
 // Розвязок
 const imagesList = images
   .map(
-    (element) =>
-      `<li class="gallery-items"><img src="${element.url}" alt="${element.alt}"></li>`
+    (image) =>
+      `<li class="gallery-items"><img src="${image.url}" alt="${image.alt}"></li>`
   )
   .join("");
 
