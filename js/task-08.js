@@ -13,6 +13,7 @@ const profile = {};
 formRef.addEventListener("submit", (event) => {
   event.preventDefault();
   const emailValue = formRef.elements.email.value.trim();
+  // console.log(formRef.elements);
   const passwordValue = formRef.elements.password.value.trim();
 
   if (emailValue === "" || passwordValue === "") {
